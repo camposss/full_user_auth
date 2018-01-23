@@ -6,7 +6,7 @@ module.exports = {
     entry: [
         'babel-polyfill',
         'webpack-dev-server/client?http://localhost:' + PORT,
-        './auth.js'
+        './index.js'
     ],
     output: {
         filename: 'bundle.js',

@@ -1,7 +1,11 @@
 import React from 'react';
+import {connect } from 'react-redux';
+import {getQuote} from "../actions/";
 
 
-export default props => {
+const MovieQuotes = props => {
+
+    props.getQuote();
     return (
         <div>
             <h1 className='center-align'>Check out these Movie Quotes</h1>
@@ -11,3 +15,5 @@ export default props => {
         </div>
     )
 }
+
+export default connect(null, {getQuote} )(MovieQuotes);

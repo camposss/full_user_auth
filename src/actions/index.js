@@ -37,5 +37,18 @@ export function signIn(cred){
         });
     }
 }
+export function getQuote(){
+    return dispatch => {
+        const config ={
+            headers: {
+                authorization: localStorage.getItem('token')
+            }
+        };
+        axios.get(BASE_URL, config).then(resp=>{
+            console.log('quote response: ', resp);
+        });
+
+    }
+}
 
 
