@@ -37,6 +37,13 @@ export function signIn(cred){
         });
     }
 }
+export function logOut(){
+    localStorage.removeItem('token');
+
+    return{
+        type: types.LOG_OUT
+    }
+}
 export function getQuote(){
     return dispatch => {
         const config ={
@@ -46,6 +53,10 @@ export function getQuote(){
         };
         axios.get(BASE_URL, config).then(resp=>{
             console.log('quote response: ', resp);
+            dispatch({
+                type: types.GET_QUOTE,
+                payload: resp.data.message
+            })
         });
 
     }

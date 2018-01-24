@@ -3,5 +3,5 @@ export default {
     SIGN_IN: 'sign_in',
     LOG_OUT: 'log_out',
     ERROR: 'error',
-    GET_SUM: 'get_sum'
+    GET_QUOTE: 'get_quote'
 };
